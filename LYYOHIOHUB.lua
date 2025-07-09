@@ -181,7 +181,7 @@ local function AutoFarmBank()
             task.wait(0.5)  -- 等待0.5秒
         -- 情况3：无现金包，抢劫完成，切换服务器
         else
-            ShowNotification("抢劫银行完成，1秒后换服")
+            ShowNotification("开始")
             task.wait(1)  -- 等待1秒
             TPServer()  -- 切换服务器
             return
@@ -189,7 +189,7 @@ local function AutoFarmBank()
     end
 end
 -- 脚本启动提示
-ShowNotification("LYY OHIO HUB - 优先物品拾取")
+ShowNotification("LYY OHIO HUB - 拾取成功")
 -- 先执行自动拾取物品流程
 local itemsFinished = AutoPickItem()
 -- 若物品拾取流程结束（未找到物品且未超时），则执行抢劫银行流程
