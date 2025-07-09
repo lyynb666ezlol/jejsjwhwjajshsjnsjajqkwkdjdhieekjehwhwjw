@@ -63,7 +63,7 @@ elseif playerName == "CN_30224854980" then
     _G.lyy = true
     elseif playerName == "ohioN855" then
     _G.lyy = true
-    elseif playerName == "" then
+    elseif playerName == "haozheng4528" then
     _G.lyy = true
 elseif playerName == "" then
     _G.lyy = true
