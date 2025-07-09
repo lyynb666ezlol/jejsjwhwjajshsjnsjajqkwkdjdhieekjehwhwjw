@@ -1,7 +1,7 @@
 local CoreGui = game:GetService("StarterGui")
 -- 修复：补充逗号分隔键值对（原代码缺少逗号，导致语法错误）
 CoreGui:SetCore("SendNotification", {
-    Title = "挂机助手",
+    Title = "挂机助手 全自动",
     Text = "v1.2_小希销冠",
     Duration = 6, 
 })
