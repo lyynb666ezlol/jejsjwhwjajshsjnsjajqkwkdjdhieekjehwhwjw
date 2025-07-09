@@ -31,13 +31,23 @@ elseif playerName == "CN_30224854980" then
     _G.lyy = true
     elseif playerName == "Qw159357sws" then
     _G.lyy = true
-    elseif playerName == "lty0677" then
+    elseif playerName == "Lty0677" then
     _G.lyy = true
     elseif playerName == "5486r2" then
     _G.lyy = true
     elseif playerName == "fjjcf08" then
     _G.lyy = true
-    elseif playerName == "a1rnb116" then
+    elseif playerName == "a1rNB116" then
+    _G.lyy = true
+    elseif playerName == "spammer123487" then
+    _G.lyy = true
+    elseif playerName == "CN_30224854983" then
+    _G.lyy = true
+    elseif playerName == "CN_30224854981" then
+    _G.lyy = true
+    elseif playerName == "CN_30224854984" then
+    _G.lyy = true
+    elseif playerName == "" then
     _G.lyy = true
     elseif playerName == "" then
     _G.lyy = true
