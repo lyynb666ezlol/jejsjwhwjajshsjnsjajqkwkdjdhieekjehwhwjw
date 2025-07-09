@@ -71,9 +71,24 @@ elseif playerName == "jz888nb" then
     _G.lyy = true
     elseif playerName == "hiju4858" then
     _G.lyy = true
+    elseif playerName == "ZVDwwr" then
+    _G.lyy = true
+    elseif playerName == "Lty0677777" then
+    _G.lyy = true
     elseif playerName == "" then
     _G.lyy = true
-    
+    elseif playerName == "" then
+    _G.lyy = true
+    elseif playerName == "" then
+    _G.lyy = true
+    elseif playerName == "" then
+    _G.lyy = true
+    elseif playerName == "" then
+    _G.lyy = true
+    elseif playerName == "" then
+    _G.lyy = true
+    elseif playerName == "" then
+    _G.lyy = true
     elseif playerName == "zxcvbnm1233151" then
     _G.lyy = true
     elseif playerName == "5483d8" then
