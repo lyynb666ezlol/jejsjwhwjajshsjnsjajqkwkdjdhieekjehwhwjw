@@ -23,7 +23,7 @@ _G.lyy = false -- 初始化状态
 -- 白名单判断（修正条件链，确保每个分支正确执行）
 if playerName == "a1rNB116" then
     _G.lyy = true
-elseif playerName == " NU732894482" then
+elseif playerName == "NU732894482" then
     _G.lyy = true
 elseif playerName == "CN_30224854980" then
     _G.lyy = true
@@ -47,10 +47,21 @@ elseif playerName == "CN_30224854980" then
     _G.lyy = true
     elseif playerName == "CN_30224854984" then
     _G.lyy = true
-    elseif playerName == "" then
+    elseif playerName == "A1Rnb277" then
     _G.lyy = true
-    elseif playerName == "" then
+    elseif playerName == "zxcvbnm999879" then
     _G.lyy = true
+     elseif playerName == "ycyyds986" then
+    _G.lyy = true
+     elseif playerName == "Lty067777" then
+    _G.lyy = true
+     elseif playerName == "" then
+    _G.lyy = true
+     elseif playerName == "" then
+    _G.lyy = true
+     elseif playerName == "" then
+    _G.lyy = true
+    
     elseif playerName == "zxcvbnm1233151" then
     _G.lyy = true
     elseif playerName == "5483d8" then
