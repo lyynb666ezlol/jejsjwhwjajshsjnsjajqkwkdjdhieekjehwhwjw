@@ -1,0 +1,21 @@
+local CoreGui = game:GetService("StarterGui")
+-- 修复：补充逗号分隔键值对（原代码缺少逗号，导致语法错误）
+CoreGui:SetCore("SendNotification", {
+    Title = "挂机助手",
+    Text = "v1.1",
+    Duration = 6, 
+})
+
+-- 修复：添加错误捕获，排查链接问题
+local success, err = pcall(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/lyynb666ezlol/jejsjwhwjajshsjnsjajqkwkdjdhieekjehwhwjw/refs/heads/main/1_%E7%99%BD%E5%90%8D%E5%8D%95.lua"))()
+end)
+
+-- 显示错误信息（方便排查问题）
+if not success then
+    CoreGui:SetCore("SendNotification", {
+        Title = "加载失败",
+        Text = "错误信息：" .. err,
+        Duration = 10,
+    })
+end
