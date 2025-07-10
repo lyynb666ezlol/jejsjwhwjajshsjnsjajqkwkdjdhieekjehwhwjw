@@ -95,9 +95,9 @@ elseif playerName == "jz888nb" then
     _G.lyy = true
      elseif playerName == "hsjsn111u" then
     _G.lyy = true
-     elseif playerName == "" then
+     elseif playerName == "A1RNB0" then
     _G.lyy = true
-     elseif playerName == "" then
+     elseif playerName == "jason897919" then
     _G.lyy = true
      elseif playerName == "" then
     _G.lyy = true
