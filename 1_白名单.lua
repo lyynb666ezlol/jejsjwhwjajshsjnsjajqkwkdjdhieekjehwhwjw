@@ -137,10 +137,10 @@ if _G.lyy then
     end
 else
     -- 验证失败：复制QQ并提示
-    setclipboard("1773636032 3022485498 1390500951 875100900 3549375062")
+    setclipboard("1773636032  1390500951 875100900 3549375062")
     StarterGui:SetCore("SendNotification", {
         Title = "验证失败",
-        Text = "你不在白名单中，已复制作者和代理的QQ号",
+        Text = "细狗没妈 道版别买，已复制购买渠到",
         Duration = 1
     })
 end
