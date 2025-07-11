@@ -40,7 +40,9 @@ local targetItems = {
        "Suitcase Nuke",
         "Helicopter",
          "Trident",
-          "Golden Cup"
+          "Golden Cup",
+          "One Dollar Ballon",
+            
 }
 
 local function ShowNotification(text)
@@ -152,7 +154,7 @@ local function AutoFarmBank()
             task.wait(0.5)
         else
             ShowNotification("即将换服")
-            task.wait(1)
+            task.wait(0.5)
             TPServer()
             return
         end
