@@ -151,10 +151,10 @@ local function AutoFarmBank()
             BankCashs.Main.Attachment.ProximityPrompt.RequiresLineOfSight = false
             BankCashs.Main.Attachment.ProximityPrompt.HoldDuration = 0
             fireproximityprompt(BankCashs.Main.Attachment.ProximityPrompt)
-            task.wait(0.5)
+            task.wait(0.01)
         else
             ShowNotification("即将换服")
-            task.wait(0.5)
+            task.wait(0.01)
             TPServer()
             return
         end
