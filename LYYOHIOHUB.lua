@@ -41,7 +41,7 @@ local targetItems = {
         "Helicopter",
          "Trident",
           "Golden Cup",
-          "One Dollar Ballon",
+          "One Dollar Ballon"
             
 }
 
