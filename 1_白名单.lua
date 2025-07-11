@@ -57,7 +57,7 @@ elseif playerName == "CN_30224854980" then
     _G.lyy = true
      elseif playerName == "a1rNB6666" then
     _G.lyy = true
-     elseif playerName == "AAOA530" then
+     elseif playerName == "" then
     _G.lyy = true
      elseif playerName == "5sydt6" then
     _G.lyy = true
@@ -83,7 +83,7 @@ elseif playerName == "jz888nb" then
     _G.lyy = true
     elseif playerName == "Hnq115" then
     _G.lyy = true
-    elseif playerName == "Qw135246ab" then
+    elseif playerName == "" then
     _G.lyy = true
     elseif playerName == "5489d70" then
     _G.lyy = true
