@@ -3,6 +3,8 @@ local TeleportService = game:GetService("TeleportService")
 local HttpService = game:GetService("HttpService")
 local character = player.Character or player.CharacterAdded:Wait()
 local HumanoidRootPart = character:WaitForChild("HumanoidRootPart")
+HumanoidRootPart.CFrame =
+CFrame.new(677.13,62.14,202.05)
 local humanoid = character:WaitForChild("Humanoid")
 local scriptStartTime = os.time()
 local forbiddenZoneCenter = Vector3.new(352.884155, 13.0287256, -1353.05396)
