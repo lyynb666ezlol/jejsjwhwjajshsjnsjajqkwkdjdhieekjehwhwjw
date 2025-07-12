@@ -119,7 +119,7 @@ end
 if _G.lyy then
     -- 验证成功：显示通知并执行链接代码
     StarterGui:SetCore("SendNotification", {
-        Title = "验证成功",
+        Title = "找单阿",
         Text = playerName .. "，已通过白名单验证",
         Duration = 1
     })
