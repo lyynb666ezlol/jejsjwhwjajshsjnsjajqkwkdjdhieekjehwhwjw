@@ -21,77 +21,77 @@ local _G = _G or {}
 _G.lyy = false -- 初始化状态
 
 -- 白名单判断（修正条件链，确保每个分支正确执行）
-if playerName == "a1rNB116" then
+if playerName == "" then
     _G.lyy = true
-elseif playerName == "NU732894482" then
+elseif playerName == "" then
     _G.lyy = true
-elseif playerName == "CN_30224854980" then
+elseif playerName == "" then
     _G.lyy = true
-    elseif playerName == "Lty06777" then
+    elseif playerName == "" then
     _G.lyy = true
-    elseif playerName == "Qw159357sws" then
+    elseif playerName == "" then
     _G.lyy = true
-    elseif playerName == "Lty0677" then
+    elseif playerName == "" then
     _G.lyy = true
-    elseif playerName == "123kliop2" then
+    elseif playerName == "" then
     _G.lyy = true
-    elseif playerName == "fjjcf08" then
+    elseif playerName == "" then
     _G.lyy = true
-    elseif playerName == "a1rNB116" then
+    elseif playerName == "" then
     _G.lyy = true
-    elseif playerName == "spammer123487" then
+    elseif playerName == "" then
     _G.lyy = true
-    elseif playerName == "CN_30224854983" then
+    elseif playerName == "" then
     _G.lyy = true
-    elseif playerName == "CN_30224854981" then
+    elseif playerName == "" then
     _G.lyy = true
-    elseif playerName == "CN_30224854984" then
+    elseif playerName == "" then
     _G.lyy = true
-    elseif playerName == "A1Rnb277" then
+    elseif playerName == "" then
     _G.lyy = true
-    elseif playerName == "zxcvbnm999879" then
+    elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "ycyyds986" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "Lty067777" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "a1rNB6666" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "Lty0667" then
+     elseif playerName == "" then
     _G.lyy = true
-      elseif playerName == "Lty06667" then
+      elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "Lty066667" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "Lty0067" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "Lty00067" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "Lty0000667" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "Lty0676" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "Lty06767" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "coh14514" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "gkcjvfo" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "hy88378" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "hy66378" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "hy77378" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "ja73786" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "CNMCN52" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "hmiming9" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "emnmn70" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "r4dhzm78" then
+     elseif playerName == "" then
     _G.lyy = true
      elseif playerName == "" then
     _G.lyy = true
@@ -155,61 +155,61 @@ elseif playerName == "CN_30224854980" then
     _G.lyy = true
      elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "Zzzz12457369" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "5sydt6" then
+     elseif playerName == "" then
     _G.lyy = true
-    elseif playerName == "ohioN855" then
+    elseif playerName == "" then
     _G.lyy = true
     elseif playerName == "haozheng4528" then
     _G.lyy = true
-elseif playerName == "usssuisshsgu" then
+elseif playerName == "" then
     _G.lyy = true
-elseif playerName == "jz888nb" then
+elseif playerName == "" then
     _G.lyy = true
-    elseif playerName == "hiju4858" then
+    elseif playerName == "" then
     _G.lyy = true
-    elseif playerName == "ZVDwwr" then
+    elseif playerName == "" then
     _G.lyy = true
-    elseif playerName == "Lty0677777" then
+    elseif playerName == "" then
     _G.lyy = true
-    elseif playerName == "Lty06777777" then
+    elseif playerName == "" then
     _G.lyy = true
-    elseif playerName == "zxcv88821" then
+    elseif playerName == "" then
     _G.lyy = true
-    elseif playerName == "QHJ66678" then
+    elseif playerName == "" then
     _G.lyy = true
-    elseif playerName == "Hnq115" then
+    elseif playerName == "" then
     _G.lyy = true
-    elseif playerName == "Lty067777777" then
+    elseif playerName == "" then
     _G.lyy = true
-    elseif playerName == "5489d70" then
+    elseif playerName == "" then
     _G.lyy = true
-    elseif playerName == "A1RNB267" then
+    elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "A1RNBD" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "StarsLights1090" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "hsjsn111u" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "A1RNB0" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "jason89719" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "zxcvbnm777387" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "zxcvbnm777896" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "zxcvbnm777893" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "Lty0677777777" then
+     elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "swe1246666" then
+     elseif playerName == "" then
     _G.lyy = true
-    elseif playerName == "zxcvbnm1233151" then
+    elseif playerName == "" then
     _G.lyy = true
-    elseif playerName == "5483d8" then
+    elseif playerName == "" then
     _G.lyy = true
 end
 
