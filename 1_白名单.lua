@@ -21,33 +21,33 @@ local _G = _G or {}
 _G.lyy = false -- 初始化状态
 
 -- 白名单判断（修正条件链，确保每个分支正确执行）
-if playerName == "" then
+if playerName == "coh14514" then
     _G.lyy = true
-elseif playerName == "" then
+elseif playerName == "Lty0667" then
     _G.lyy = true
-elseif playerName == "" then
+elseif playerName == "Lty06667" then
     _G.lyy = true
-    elseif playerName == "" then
+    elseif playerName == "lyy0663" then
     _G.lyy = true
-    elseif playerName == "" then
+    elseif playerName == "lyynb6667891" then
     _G.lyy = true
-    elseif playerName == "" then
+    elseif playerName == "hy66378" then
     _G.lyy = true
-    elseif playerName == "" then
+    elseif playerName == "hy77378" then
     _G.lyy = true
-    elseif playerName == "" then
+    elseif playerName == "hy88378" then
     _G.lyy = true
-    elseif playerName == "" then
+    elseif playerName == "ja73786" then
     _G.lyy = true
-    elseif playerName == "" then
+    elseif playerName == "hyac781378" then
     _G.lyy = true
-    elseif playerName == "" then
+    elseif playerName == "hyac78666" then
     _G.lyy = true
-    elseif playerName == "" then
+    elseif playerName == "8bhhh1" then
     _G.lyy = true
-    elseif playerName == "" then
+    elseif playerName == "lyynbxiaotianwocnm" then
     _G.lyy = true
-    elseif playerName == "" then
+    elseif playerName == "haozheng7619" then
     _G.lyy = true
     elseif playerName == "" then
     _G.lyy = true
