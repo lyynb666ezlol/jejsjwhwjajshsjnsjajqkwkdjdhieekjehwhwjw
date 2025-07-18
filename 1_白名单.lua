@@ -63,11 +63,11 @@ elseif playerName == "Lty06667" then
     _G.lyy = true
      elseif playerName == "dyxbjo" then
     _G.lyy = true
-     elseif playerName == "nnxb959" then
+     elseif playerName == "" then
     _G.lyy = true
      elseif playerName == "jxnbx8" then
     _G.lyy = true
-     elseif playerName == "" then
+     elseif playerName == "eihckwnck" then
     _G.lyy = true
      elseif playerName == "" then
     _G.lyy = true
