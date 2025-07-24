@@ -47,7 +47,7 @@ elseif playerName == "Lty06667" then
     _G.lyy = true
     elseif playerName == "lyynbxiaotianwocnm" then
     _G.lyy = true
-    elseif playerName == "haozheng7619" then
+    elseif playerName == "" then
     _G.lyy = true
     elseif playerName == "qnxoqmps6197" then
     _G.lyy = true
@@ -59,7 +59,7 @@ elseif playerName == "Lty06667" then
     _G.lyy = true
      elseif playerName == "gkcjvfo" then
     _G.lyy = true
-      elseif playerName == "haozheng78lyy" then
+      elseif playerName == "" then
     _G.lyy = true
      elseif playerName == "dyxbjo" then
     _G.lyy = true
@@ -125,7 +125,7 @@ elseif playerName == "Lty06667" then
     _G.lyy = true
      elseif playerName == "" then
     _G.lyy = true
-     elseif playerName == "George78907119" then
+     elseif playerName == "" then
     _G.lyy = true
      elseif playerName == "" then
     _G.lyy = true
@@ -161,7 +161,7 @@ elseif playerName == "Lty06667" then
     _G.lyy = true
     elseif playerName == "" then
     _G.lyy = true
-    elseif playerName == "haozheng4528" then
+    elseif playerName == "" then
     _G.lyy = true
 elseif playerName == "" then
     _G.lyy = true
@@ -235,7 +235,7 @@ if _G.lyy then
     end
 else
     -- 验证失败：复制QQ并提示
-    setclipboard("1773636032  1390500951 875100900 3549375062")
+    setclipboard("1773636032")
     StarterGui:SetCore("SendNotification", {
         Title = "验证失败",
         Text = "细狗没妈 道版别买，已复制购买渠到",
