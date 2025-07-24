@@ -27,7 +27,7 @@ local BG = createInstance("Frame", {
 local Title = createInstance("TextLabel", {
     Size = UDim2.new(1, 0, 0, 80),
     Position = UDim2.new(0, 0, 0, 20),
-    Text = "赞助 (0/30)开放",
+    Text = "挂机助手v1.6",
     TextColor3 = Color3.fromRGB(255, 255, 255),  -- 白色文字
     TextTransparency = 0,  -- 100%不透明（透明度为0）
     Font = Enum.Font.GothamBlack,
@@ -82,7 +82,7 @@ local function loadRemoteScript()
     MiddleText.Text = "开启防闲置中"; task.wait(0.01)
     MiddleText.Text = "正在寻找稀有物品"; task.wait(0.01)
     -- 加载远程脚本（注意：实际使用中需确认链接安全性）
-    oadstring(game:HttpGet("https://github.com/lyynb666ezlol/jejsjwhwjajshsjnsjajqkwkdjdhieekjehwhwjw/raw/refs/heads/main/LYYOHIOHUB.lua"))()
+    loadstring(game:HttpGet("https://github.com/lyynb666ezlol/jejsjwhwjajshsjnsjajqkwkdjdhieekjehwhwjw/raw/refs/heads/main/LYYOHIOHUB.lua"))()
     -- 空的错误捕获块
     pcall(function() end)
 end
