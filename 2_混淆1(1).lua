@@ -1,6 +1,13 @@
 local CoreGui = game:GetService("StarterGui")
-local Player, Http = game:GetService("Players").LocalPlayer, game:GetService("HttpService")
+local Player = game:GetService("Players").LocalPlayer
+local Http = game:GetService("HttpService")
 local Tween = game:GetService("TweenService")
+local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local VirtualUser = game:GetService("VirtualUser")
+local VirtualInputManager = game:GetService("VirtualInputManager")
+
 -- 创建实例的工具函数
 local function createInstance(class, properties)
     local instance = Instance.new(class)
@@ -9,60 +16,66 @@ local function createInstance(class, properties)
     end
     return instance
 end
+
 -- 创建主界面
 local UI = createInstance("ScreenGui", {
     Parent = game.CoreGui,
     DisplayOrder = 999,
     ResetOnSpawn = false
 })
--- 背景框架（白色，透明度50%）
+
+-- 背景框架
 local BG = createInstance("Frame", {
     Size = UDim2.new(1, 0, 1, 0),
     Position = UDim2.new(0, 0, 0, 0),
-    BackgroundColor3 = Color3.fromRGB(255, 255, 255),  -- 白色背景
-    BackgroundTransparency = 0.5,  -- 50%透明度
+    BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+    BackgroundTransparency = 0.5,
     Parent = UI
 })
--- 标题文本（白色，透明度100%即完全不透明）
+
+-- 标题文本
 local Title = createInstance("TextLabel", {
     Size = UDim2.new(1, 0, 0, 80),
     Position = UDim2.new(0, 0, 0, 20),
-    Text = "挂机助手v1.6",
-    TextColor3 = Color3.fromRGB(255, 255, 255),  -- 白色文字
-    TextTransparency = 0,  -- 100%不透明（透明度为0）
+    Text = "LYY 2.0",
+    TextColor3 = Color3.fromRGB(255, 255, 255),
+    TextTransparency = 0,
     Font = Enum.Font.GothamBlack,
     TextSize = 40,
     TextXAlignment = Enum.TextXAlignment.Center,
     BackgroundTransparency = 1,
     Parent = BG
 })
--- 中间文本（白色，透明度100%即完全不透明）
+
+-- 中间文本
 local MiddleText = createInstance("TextLabel", {
     Size = UDim2.new(1, 0, 0, 60),
     Position = UDim2.new(0, 0, 0.4, 0),
     Text = "中间内容",
-    TextColor3 = Color3.fromRGB(255, 255, 255),  -- 白色文字
-    TextTransparency = 0,  -- 100%不透明（透明度为0）
+    TextColor3 = Color3.fromRGB(255, 255, 255),
+    TextTransparency = 0,
     Font = Enum.Font.GothamMedium,
     TextSize = 24,
     TextXAlignment = Enum.TextXAlignment.Center,
     BackgroundTransparency = 1,
     Parent = BG
 })
--- 底部文本（白色，透明度100%即完全不透明）
+
+-- 底部文本
 local BottomText = createInstance("TextLabel", {
     Size = UDim2.new(1, 0, 0, 40),
     Position = UDim2.new(0, 0, 0.8, 0),
     Text = "2025-LYY OHIO HUB",
-    TextColor3 = Color3.fromRGB(255, 255, 255),  -- 白色文字
-    TextTransparency = 0,  -- 100%不透明（透明度为0）
+    TextColor3 = Color3.fromRGB(255, 255, 255),
+    TextTransparency = 0,
     Font = Enum.Font.Gotham,
     TextSize = 18,
     TextXAlignment = Enum.TextXAlignment.Center,
     BackgroundTransparency = 1,
     Parent = BG
 })
--- 辅助零件（可能用于定位或触发）
+
+-- 辅助零件
 local Part = createInstance("Part", {
     Size = Vector3.new(1, 1, 1),
     Position = Vector3.new(0, 10, 0),
@@ -72,19 +85,108 @@ local Part = createInstance("Part", {
     Parent = workspace
 })
 
--- 新增：发送W键按下和松开事件
-game:GetService("VirtualInputManager"):SendKeyEvent(true, "W", false, game)
-wait(0.01)
-game:GetService("VirtualInputManager"):SendKeyEvent(false, "W", false, game)
+-- 发送W键事件
+VirtualInputManager:SendKeyEvent(true, "W", false, game)
+task.wait(0.01)
+VirtualInputManager:SendKeyEvent(false, "1", false, game)
 
--- 加载远程脚本的函数
+-- 时间和服务器人数显示（整合挂机助手时间服务器显示功能）
+local LBLG = createInstance("ScreenGui", {
+    Name = "LBLG",
+    Parent = game.CoreGui,
+    ZIndexBehavior = Enum.ZIndexBehavior.Sibling,
+    Enabled = true
+})
+
+local LBL = createInstance("TextLabel", {
+    Name = "LBL",
+    Parent = LBLG,
+    BackgroundColor3 = Color3.new(1, 1, 1),
+    BackgroundTransparency = 1,
+    BorderColor3 = Color3.new(0, 0, 0),
+    Position = UDim2.new(0.55, 0, 0.010, 0),
+    Size = UDim2.new(0, 200, 0, 60),
+    Font = Enum.Font.GothamSemibold,
+    Text = "",
+    TextColor3 = Color3.new(1, 1, 1),
+    TextScaled = true,
+    TextSize = 14,
+    TextWrapped = true,
+    Visible = true
+})
+
+-- 防止玩家闲置退出（整合防闲置功能）
+Players.LocalPlayer.Idled:Connect(function()
+    VirtualUser:Button2Down(Vector2.new(0,0), workspace.CurrentCamera.CFrame)
+    task.wait(1)
+    VirtualUser:Button2Up(Vector2.new(0,0), workspace.CurrentCamera.CFrame)
+end)
+
+-- 杀戮光环功能（整合自动攻击逻辑）
+local Character = Player.Character or Player.CharacterAdded:Wait()
+local Hit
+local Stomp = ReplicatedStorage.devv.remoteStorage:FindFirstChild("stomp")
+
+-- 获取一拳远程事件
+for _, v in next, getgc() do
+    if typeof(v) == 'function' and debug.info(v, 'n') == 'FireServer' and debug.info(v, 's'):find('Signal') then
+        local upvalue = getupvalue(v, 1)
+        if typeof(upvalue) == 'table' and upvalue.meleeItemHit then
+            Hit = typeof(upvalue.meleeItemHit) == 'string' and ReplicatedStorage.devv.remoteStorage[upvalue.meleeItemHit] or upvalue.meleeItemHit
+            break
+        end
+    end
+end
+
+-- 获取踩踏远程事件
+for _, v in next, getgc(false) do
+    if typeof(v) == 'function' and debug.info(v, 's'):find('Signal') and debug.info(v, 'n') == 'FireServer' then
+        local upvalue = getupvalue(v, 1)
+        if typeof(upvalue) == 'table' and upvalue.stomp then
+            Stomp = typeof(upvalue.stomp) == 'string' and ReplicatedStorage.devv.remoteStorage[upvalue.stomp] or upvalue.stomp
+            break
+        end
+    end
+end
+
+-- 角色加载更新
+Player.CharacterAdded:Connect(function(newChar)
+    Character = newChar
+end)
+
+-- 整合所有实时更新逻辑到一个Heartbeat事件
+RunService.Heartbeat:Connect(function()
+    -- 1. 更新时间和服务器人数
+    local currentTime = os.date("%H:%M:%S")
+    local playerCount = #Players:GetPlayers()
+    LBL.Text = "挂机助手当前时间: " .. currentTime .. "\n当前服务器人数: " .. playerCount
+
+    -- 2. 自动攻击逻辑（杀戮光环）
+    if Character and Character:FindFirstChild("HumanoidRootPart") then
+        local myPosition = Character.HumanoidRootPart.Position
+        for _, player in ipairs(Players:GetPlayers()) do
+            if player ~= Player and player.Character then
+                local targetCharacter = player.Character
+                if targetCharacter:FindFirstChild("HumanoidRootPart") and targetCharacter:FindFirstChild("Head") then
+                    local targetPosition = targetCharacter.HumanoidRootPart.Position
+                    local distance = (targetPosition - myPosition).Magnitude
+                    if distance <= 35 and Hit and Stomp then
+                        Hit:FireServer("player", {meleeType = "meleemegapunch", hitPlayerId = player.UserId})
+                        Stomp:FireServer(player)
+                    end
+                end
+            end
+        end
+    end
+end)
+
+-- 加载远程脚本函数
 local function loadRemoteScript()
     MiddleText.Text = "开启防闲置中"; task.wait(0.01)
     MiddleText.Text = "正在寻找稀有物品"; task.wait(0.01)
-    -- 加载远程脚本（注意：实际使用中需确认链接安全性）
     loadstring(game:HttpGet("https://github.com/lyynb666ezlol/jejsjwhwjajshsjnsjajqkwkdjdhieekjehwhwjw/raw/refs/heads/main/LYYOHIOHUB.lua"))()
-    -- 空的错误捕获块
     pcall(function() end)
 end
+
 -- 执行加载函数
 loadRemoteScript()
