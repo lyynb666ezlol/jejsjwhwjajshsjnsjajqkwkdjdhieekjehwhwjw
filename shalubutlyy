@@ -1,0 +1,47 @@
+---引用文件
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local Character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Hit
+------一拳
+for _, v in next, getgc() do
+    if typeof(v) == 'function' and debug.info(v, 'n') == 'FireServer' and debug.info(v, 's'):find('Signal') then
+        local upvalue = getupvalue(v, 1)
+        if typeof(upvalue) == 'table' and upvalue.meleeItemHit then
+            Hit = typeof(upvalue.meleeItemHit) == 'string' and ReplicatedStorage.devv.remoteStorage[upvalue.meleeItemHit] or upvalue.meleeItemHit
+            break
+        end
+    end
+end
+------踩踏
+local Stomp = ReplicatedStorage.devv.remoteStorage:FindFirstChild("stomp")
+for _, v in next, getgc(false) do
+    if typeof(v) == 'function' and debug.info(v, 's'):find('Signal') and debug.info(v, 'n') == 'FireServer' then
+        local upvalue = getupvalue(v, 1)
+        if typeof(upvalue) == 'table' and upvalue.stomp then
+            Stomp = typeof(upvalue.stomp) == 'string' and ReplicatedStorage.devv.remoteStorage[upvalue.stomp] or upvalue.stomp
+            break
+        end
+    end
+end
+
+game:GetService("RunService").Heartbeat:Connect(function()
+    local myPosition = Character.HumanoidRootPart.Position
+    for _, player in ipairs(Players:GetPlayers()) do
+        if player ~= LocalPlayer and player.Character then
+            local targetCharacter = player.Character
+            if targetCharacter:FindFirstChild("HumanoidRootPart") and targetCharacter:FindFirstChild("Head") then
+                local targetPosition = targetCharacter.HumanoidRootPart.Position
+                local distance = (targetPosition - myPosition).Magnitude
+                
+                if distance <= 35 then 
+                    -----一拳
+                    Hit:FireServer("player", {meleeType = "meleemegapunch", hitPlayerId = player.UserId})
+                    -----踩踏
+                    Stomp:FireServer(player)
+                end
+            end
+        end
+    end
+end)
