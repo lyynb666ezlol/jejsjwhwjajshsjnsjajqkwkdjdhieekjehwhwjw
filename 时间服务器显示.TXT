@@ -1,0 +1,37 @@
+-- 防止玩家闲置退出
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+    vu:Button2Down(Vector2.new(0,0), workspace.CurrentCamera.CFrame)
+    wait(1)
+    vu:Button2Up(Vector2.new(0,0), workspace.CurrentCamera.CFrame)
+end)
+
+-- 创建界面元素
+local LBLG = Instance.new("ScreenGui")
+LBLG.Name = "LBLG"
+LBLG.Parent = game.CoreGui
+LBLG.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+LBLG.Enabled = true
+
+local LBL = Instance.new("TextLabel", LBLG)
+LBL.Name = "LBL"
+LBL.BackgroundColor3 = Color3.new(1, 1, 1)
+LBL.BackgroundTransparency = 1
+LBL.BorderColor3 = Color3.new(0, 0, 0)
+LBL.Position = UDim2.new(0.55, 0, 0.010, 0) -- 从0.75调整为0.55，整体左移
+LBL.Size = UDim2.new(0, 200, 0, 60)
+LBL.Font = Enum.Font.GothamSemibold
+LBL.Text = ""
+LBL.TextColor3 = Color3.new(1, 1, 1)
+LBL.TextScaled = true
+LBL.TextSize = 14
+LBL.TextWrapped = true
+LBL.Visible = true
+
+-- 实时更新显示
+local Heartbeat = game:GetService("RunService").Heartbeat
+Heartbeat:Connect(function()
+    local currentTime = os.date("%H:%M:%S")
+    local playerCount = #game:GetService("Players"):GetPlayers()
+    LBL.Text = "当前时间: " .. currentTime .. "\n当前服务器人数: " .. playerCount
+end)
