@@ -88,7 +88,7 @@ local Part = createInstance("Part", {
 -- 发送W键事件
 VirtualInputManager:SendKeyEvent(true, "W", false, game)
 task.wait(0.01)
-VirtualInputManager:SendKeyEvent(false, "1", false, game)
+VirtualInputManager:SendKeyEvent(false, "W", false, game)
 
 -- 时间和服务器人数显示（整合挂机助手时间服务器显示功能）
 local LBLG = createInstance("ScreenGui", {
